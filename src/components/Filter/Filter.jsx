@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Title from '../Utils/Title/Title';
-import Input from '../Utils/Input/Input';
-import { Container } from './Filter.styled';
+import React from "react";
+import { connect } from "react-redux";
+import { filterContact } from "../../redux/actions/contacts";
+import PropTypes from "prop-types";
+import Title from "../Utils/Title/Title";
+import Input from "../Utils/Input/Input";
 
-function Filter({ placeholder, value, onChange }) {
+function Filter({ value, onChange }) {
   return (
-    <Container>
+    <>
       <Title size={18} text="Find Contacts by name" />
       <Input
         placeholder="type to find contacts..."
@@ -15,13 +16,21 @@ function Filter({ placeholder, value, onChange }) {
         value={value}
         onChange={onChange}
       />
-    </Container>
+    </>
   );
 }
 
+const mapStateToProps = (state) => ({
+  value: state.filter,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onChange: (e) => dispatch(filterContact(e.target.value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+
 Filter.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
-
-export default Filter;

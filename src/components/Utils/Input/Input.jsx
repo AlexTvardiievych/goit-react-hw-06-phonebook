@@ -1,5 +1,5 @@
-import React from 'react';
-import { Field } from './Input.styled';
+import React from "react";
+import { Field } from "./Input.styled";
 
 function Input({ value, type, name, onChange, placeholder }) {
   return (

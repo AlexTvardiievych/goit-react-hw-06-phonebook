@@ -1,5 +1,5 @@
-import React from 'react';
-import { Btn } from './Button.styled';
+import React from "react";
+import { Btn } from "./Button.styled";
 
 function Button({ text, onClick, title }) {
   return (

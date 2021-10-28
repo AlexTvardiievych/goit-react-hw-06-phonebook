@@ -1,5 +1,5 @@
-import React from 'react';
-import { PageTitle } from './Title.styled';
+import React from "react";
+import { PageTitle } from "./Title.styled";
 
 function Title({ marginT, marginR, marginL, text, size, color }) {
   return (

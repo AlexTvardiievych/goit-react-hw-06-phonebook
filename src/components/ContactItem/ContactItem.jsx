@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Name, Number } from './ContactItem.styled';
+import React from "react";
+import PropTypes from "prop-types";
+import { Name, Number } from "./ContactItem.styled";
 
 function ContactItem({ contact }) {
   return (

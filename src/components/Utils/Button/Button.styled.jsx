@@ -1,11 +1,16 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const Btn = styled.button`
-  border: solid;
-  border-width: 1px;
+  margin-top: 15px;
+  width: 300px;
+  border: none;  
+  background-color: transparent;
+
+  
   background-color: transparent;
   cursor: pointer;
-  width: 100px;
-  height: 30px;
-  margin-top: 10px
+
+  &:hover {
+    border-bottom: 1px solid #000d59;
+  }
 `;
